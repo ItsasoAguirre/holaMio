@@ -1,0 +1,11 @@
+#####################
+# ficheros ignorados por GIT
+####################
+
+# clases compiladas de java .class
+
+/bin/
+
+#configuracion de eclipse
+/.classpath
+/.project
