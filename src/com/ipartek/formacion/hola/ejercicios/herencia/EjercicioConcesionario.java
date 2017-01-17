@@ -14,7 +14,8 @@ public class EjercicioConcesionario {
 
 		// TODO crear vehiculos
 
-		ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+		ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+
 		vehiculos.add(new Vehiculo("Prius"));
 		vehiculos.add(new Vehiculo("Ibiza"));
 		vehiculos.add(new Vehiculo("Fiesta"));
@@ -26,13 +27,25 @@ public class EjercicioConcesionario {
 		VehiculoElectrico vehiculoElec = new VehiculoElectrico("Tesla");
 		VehiculoDiesel vehiculoDiesel = new VehiculoDiesel("Xsara");
 		VehiculoDiesel vehiculoDiesel2 = new VehiculoDiesel("Astra");
+		vehiculos.add(vehiculoElec);
+		vehiculos.add(vehiculoDiesel);
+		vehiculos.add(vehiculoDiesel2);
 
 		// TODO mostrar por pantalla
+		for (Vehiculo vehiculo : vehiculos) {
+			System.out.println("Modelo: " + vehiculo.getModelo());
+			System.out.println("Plazas: " + vehiculo.getNumPlazas());
+			System.out.println("Potencia: " + vehiculo.getPotencia());
+			if (vehiculo instanceof VehiculoElectrico) {
+				// ((VehiculoElectrico) vehiculo).getCapacidadBaterias();
+				System.out.println("Capacidad bateria: " + ((VehiculoElectrico) vehiculo).getCapacidadBaterias());
+			} else if (vehiculo instanceof VehiculoDiesel) {
+				// ((VehiculoDiesel) vehiculo).getCapacidadDeposito();
+				System.out.println("Combustible: " + ((VehiculoDiesel) vehiculo).getCapacidadDeposito());
+			}
+			System.out.println("****************************");
+		}
 
-		System.out.println(vehiculos);
-		System.out.println(vehiculoElec);
-		System.out.println(vehiculoDiesel);
-		System.out.println(vehiculoDiesel2);
 	}
 
 }
