@@ -1,6 +1,6 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public class Vehiculo {
+public class Vehiculo implements Conducible {
 
 	private int numPlazas;
 	private float dimensiones;
@@ -53,6 +53,22 @@ public class Vehiculo {
 
 	public void setPotencia(float potencia) {
 		this.potencia = potencia;
+	}
+
+	// METODOS
+	@Override
+	public void arrancar() {
+
+	}
+
+	@Override
+	public void detener() {
+
+	}
+
+	@Override
+	public void girar(String direccion) {
+
 	}
 
 	// TO STRING
