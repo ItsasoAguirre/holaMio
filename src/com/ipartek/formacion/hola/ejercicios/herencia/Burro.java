@@ -13,13 +13,8 @@ public class Burro extends Animal implements Conducible, Cocinable, Vendible {
 
 	// CONSTRUCTOR
 	public Burro(String nombre) {
-		super();
+		super("Burro", 0);
 		this.nombre = nombre;
-	}
-
-	public Burro(String raza, float precio) {
-		super(raza, precio);
-
 	}
 
 	// GETERS AND SETTERS
@@ -31,6 +26,16 @@ public class Burro extends Animal implements Conducible, Cocinable, Vendible {
 		this.nombre = nombre;
 	}
 
+	public boolean getComestible() {
+		return comestible;
+	}
+
+	public void setComestible(boolean comestible) {
+		this.comestible = comestible;
+	}
+
+	// METODOS
+
 	public boolean isComestible() {
 		this.comestible = COMESTIBLE;
 		if (this.getDescripcionReceta() != null) {
@@ -41,7 +46,6 @@ public class Burro extends Animal implements Conducible, Cocinable, Vendible {
 
 	}
 
-	// METODOS
 	@Override
 	public void arrancar() {
 		System.out.println("Arre burro");
@@ -74,14 +78,14 @@ public class Burro extends Animal implements Conducible, Cocinable, Vendible {
 
 	@Override
 	public void generarFactura() {
-		// TODO Auto-generated method stub
+		System.out.println("Factura generada");
 
 	}
 
 	// TO STRING
+
 	@Override
 	public String toString() {
-		return "Burro [nombre=" + nombre + "]";
+		return "Burro [nombre=" + nombre + ", comestible=" + comestible + "]";
 	}
-
 }

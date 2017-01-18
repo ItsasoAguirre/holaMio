@@ -20,6 +20,14 @@ public class Pajaro extends Animal implements Volador, Vendible {
 
 	}
 
+	public boolean isVolador() {
+		return volador;
+	}
+
+	public void setVolador(boolean volador) {
+		this.volador = volador;
+	}
+
 	@Override
 	public void despegar() {
 		// TODO Auto-generated method stub
@@ -30,10 +38,6 @@ public class Pajaro extends Animal implements Volador, Vendible {
 	public void aterrizar() {
 		// TODO Auto-generated method stub
 
-	}
-
-	public boolean puedeVolar() {
-		return volador;
 	}
 
 }

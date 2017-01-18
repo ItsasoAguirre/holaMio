@@ -23,6 +23,19 @@ public class Utilidades {
 	}
 
 	/**
+	 * Ordenacion en burbuja para un array de enteros
+	 * 
+	 * @see yotube hungaros bailando
+	 * @param aDesordenado
+	 *            array que se pasa desordenado
+	 * @return se decuelve el resultado ordenado
+	 */
+	static public int[] bubblesort(int[] aDesordenado) {
+
+		return aDesordenado;
+	}
+
+	/**
 	 * Suma muy rara que se inventa el jefe, no me digas para que
 	 * 
 	 * @param num1
