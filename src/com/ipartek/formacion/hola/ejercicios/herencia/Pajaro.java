@@ -1,6 +1,8 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public class Pajaro extends Animal implements Volador, Vendible, IEstupida {
+import java.util.Comparator;
+
+public class Pajaro extends Animal implements Volador, Vendible, IEstupida, Comparator<Pajaro> {
 
 	final boolean PUEDE_VOLAR = true;
 	private boolean volador;
@@ -11,6 +13,14 @@ public class Pajaro extends Animal implements Volador, Vendible, IEstupida {
 		super(raza, precio);
 		this.volador = volador;
 		numHuevosSemana = 0;
+
+	}
+
+	public Pajaro(String raza) {
+		super();
+		this.volador = volador;
+		numHuevosSemana = 0;
+		this.volador = false;
 
 	}
 
@@ -49,9 +59,20 @@ public class Pajaro extends Animal implements Volador, Vendible, IEstupida {
 	}
 
 	@Override
-	public int getPeso() {
-		return numHuevosSemana;
+	public int compare(Pajaro o1, Pajaro o2) {
 
+		return getPeso(o1) - getPeso(o2);
+
+	}
+
+	@Override
+	public int getPeso(Object Pajaro) {
+		int resul = 0;
+
+		Pajaro pajaro = this;
+		resul = pajaro.getNumHuevosSemana();
+
+		return resul;
 	}
 
 	// TO STRING

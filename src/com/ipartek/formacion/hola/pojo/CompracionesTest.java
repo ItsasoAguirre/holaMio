@@ -94,8 +94,7 @@ public class CompracionesTest {
 	public void testComparator() {
 
 		final String MSG_ERROR_DIFICULTAD = "No ordena por nivel de dificultad";
-
-		// TODO ordenar
+		// Ordena
 		Collections.sort(recetas, new ComparatorRecetaNivelDificultad());
 
 		// recetas

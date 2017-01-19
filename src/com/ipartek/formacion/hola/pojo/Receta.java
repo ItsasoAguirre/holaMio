@@ -73,7 +73,6 @@ public class Receta implements Comparable<Receta> {
 		return ingredientes;
 	}
 
-	// TODO analizar que hace
 	public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
 		this.ingredientes = (ingredientes == null) ? new ArrayList<Ingrediente>() : ingredientes;
 	}

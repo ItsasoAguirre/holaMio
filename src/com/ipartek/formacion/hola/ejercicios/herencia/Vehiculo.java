@@ -1,6 +1,8 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public class Vehiculo implements Conducible, IEstupida {
+import java.util.Comparator;
+
+public class Vehiculo implements Conducible, IEstupida, Comparator<Vehiculo> {
 
 	private int numPlazas;
 	private float dimensiones;
@@ -72,9 +74,20 @@ public class Vehiculo implements Conducible, IEstupida {
 	}
 
 	@Override
-	public int getPeso() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compare(Vehiculo o1, Vehiculo o2) {
+
+		return getPeso(o1) - getPeso(o2);
+
+	}
+
+	@Override
+	public int getPeso(Object Vehiculo) {
+		int resul = 0;
+
+		Vehiculo vehiculo = this;
+		resul = (int) vehiculo.getPotencia();
+
+		return resul;
 	}
 
 	// TO STRING
