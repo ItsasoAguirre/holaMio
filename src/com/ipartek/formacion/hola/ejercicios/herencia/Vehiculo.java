@@ -1,6 +1,6 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public class Vehiculo implements Conducible {
+public class Vehiculo implements Conducible, IEstupida {
 
 	private int numPlazas;
 	private float dimensiones;
@@ -69,6 +69,12 @@ public class Vehiculo implements Conducible {
 	@Override
 	public void girar(String direccion) {
 
+	}
+
+	@Override
+	public int getPeso() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	// TO STRING

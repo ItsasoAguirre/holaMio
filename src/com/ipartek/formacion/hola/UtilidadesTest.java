@@ -11,7 +11,7 @@ public class UtilidadesTest {
 	public void testBubbleSort() {
 
 		int[] aDesordenado = { 3, 0, 1, 8, 7, 2, 5, 4, 6, 9 };
-		int[] aOrdebado = Utilidades.bubblesort(aDesordenado);
+		int[] aOrdenado = Utilidades.bubblesort(aDesordenado);
 
 		assertEquals(0, aDesordenado[0]);
 		assertEquals(1, aDesordenado[1]);

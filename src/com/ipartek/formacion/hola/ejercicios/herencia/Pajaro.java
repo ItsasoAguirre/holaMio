@@ -1,23 +1,26 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public class Pajaro extends Animal implements Volador, Vendible {
+public class Pajaro extends Animal implements Volador, Vendible, IEstupida {
 
 	final boolean PUEDE_VOLAR = true;
 	private boolean volador;
+	private int numHuevosSemana;
 	// CONSTRUCTORES
 
 	public Pajaro(String raza, float precio, boolean volador) {
 		super(raza, precio);
 		this.volador = volador;
+		numHuevosSemana = 0;
 
 	}
 
-	// METODOS
+	// GETTERS AND SETTERS
+	public int getNumHuevosSemana() {
+		return numHuevosSemana;
+	}
 
-	@Override
-	public void generarFactura() {
-		// TODO Auto-generated method stub
-
+	public void setNumHuevosSemana(int numHuevosSemana) {
+		this.numHuevosSemana = numHuevosSemana;
 	}
 
 	public boolean isVolador() {
@@ -28,16 +31,35 @@ public class Pajaro extends Animal implements Volador, Vendible {
 		this.volador = volador;
 	}
 
+	// METODOS
+
+	@Override
+	public void generarFactura() {
+
+	}
+
 	@Override
 	public void despegar() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void aterrizar() {
-		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public int getPeso() {
+		return numHuevosSemana;
+
+	}
+
+	// TO STRING
+
+	@Override
+	public String toString() {
+		return "Pajaro [PUEDE_VOLAR=" + PUEDE_VOLAR + ", volador=" + volador + ", numHuevosSemana=" + numHuevosSemana
+				+ "]";
 	}
 
 }

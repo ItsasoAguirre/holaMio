@@ -13,6 +13,10 @@ public class Ingrediente {
 		this.nombre = nombreSet;
 	}
 
+	public Ingrediente(String nombre, float cantidad, boolean gluten) {
+
+	}
+
 	public int getCantidad() {
 		return cantidad;
 	}

@@ -12,8 +12,6 @@ public class EjercicioConcesionario {
 
 	public static void main(String[] args) {
 
-		// TODO crear vehiculos
-
 		ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 
 		vehiculos.add(new Vehiculo("Prius"));
@@ -31,7 +29,6 @@ public class EjercicioConcesionario {
 		vehiculos.add(vehiculoDiesel);
 		vehiculos.add(vehiculoDiesel2);
 
-		// TODO mostrar por pantalla
 		for (Vehiculo vehiculo : vehiculos) {
 			System.out.println("Modelo: " + vehiculo.getModelo());
 			System.out.println("Plazas: " + vehiculo.getNumPlazas());

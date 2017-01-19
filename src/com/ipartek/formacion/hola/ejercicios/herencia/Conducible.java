@@ -16,4 +16,5 @@ public interface Conducible {
 	void detener();
 
 	void girar(String direccion);
+
 }

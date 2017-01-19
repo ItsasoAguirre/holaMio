@@ -31,8 +31,24 @@ public class Utilidades {
 	 * @return se decuelve el resultado ordenado
 	 */
 	static public int[] bubblesort(int[] aDesordenado) {
+		boolean flag = true;// flas para saber si no hay cambios
+		int temp;
+
+		while (flag) {
+			flag = false;// set flag to false awaiting a possible swap
+			for (int i = 0; i < aDesordenado.length - 1; i++) {
+				if (aDesordenado[i] > aDesordenado[i + 1]) {
+					// cambiar numeros
+					temp = aDesordenado[i];
+					aDesordenado[i] = aDesordenado[i + 1];
+					aDesordenado[i + 1] = temp;
+					flag = true;// hay numeros sin ordenar
+				}
+			}
+		}
 
 		return aDesordenado;
+
 	}
 
 	/**

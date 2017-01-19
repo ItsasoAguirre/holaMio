@@ -1,5 +1,7 @@
 package com.ipartek.formacion.hola;
 
+import java.util.Arrays;
+
 public class Dado {
 
 	static String[] aAlumnos = { "Aaron", "Eneko", "Itsaso", "Iván", "Guillermo", "Lozoya", "Josu", "Ignacio", "Gomez",
@@ -19,6 +21,16 @@ public class Dado {
 	}
 
 	public static void main(String[] args) {
+
+		int[] aDesordenado = { 2, 0, 1, 9, 6, 8, 5, 3, 4, 7 };
+		// Para ordenadar arrays propio de java
+		Arrays.sort(aDesordenado);
+
+		// Utilidades.bubblesort(aDesordenado);
+		for (int i = 0; i < aDesordenado.length; i++) {
+			System.out.println(aDesordenado[i]);
+
+		}
 
 		// int numAleatorio = (int) (Math.random() * aAlumnos.length);
 		int numeroAleatorio = Utilidades.getNumAleatorio((aAlumnos.length - 1));

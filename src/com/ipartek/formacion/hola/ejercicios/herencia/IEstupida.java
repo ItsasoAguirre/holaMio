@@ -1,7 +1,7 @@
 package com.ipartek.formacion.hola.ejercicios.herencia;
 
-public interface Vendible {
+public interface IEstupida {
 
-	void generarFactura();
+	int getPeso();
 
 }
